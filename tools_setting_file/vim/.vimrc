@@ -19,6 +19,9 @@ set bg=dark
 " tab = 8 white spaces
 set tabstop=8
 
+" use white space instead of tab
+set expandtab
+
 " auto indent width
 set shiftwidth=8
 
