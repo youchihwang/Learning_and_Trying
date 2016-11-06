@@ -1,20 +1,15 @@
 
 " The setting file of vim
 
-colorscheme evening
+colorscheme peachpuff 
 "colorscheme torte
 
-
 if 1
-
 " show line number
 set nu
 
 " show cursor line
 set cursorline
-
-" fill color base on dark background
-set bg=dark
 
 " tab = 8 white spaces
 set tabstop=8
@@ -29,8 +24,8 @@ set shiftwidth=8
 set ruler
 
 " Line number color & Cursor Line number color
-hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
-hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
+" "hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
+" "hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
 
 " turn on color of syntax
 syntax on
@@ -42,11 +37,28 @@ set hlsearch
 set incsearch
 
 
-inoremap ( ()<Esc>i
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i
-inoremap [ []<Esc>i
-inoremap {<CR> {<CR>}<Esc>ko
-inoremap {{ {}<Esc>i
 
 endif
+
+"Open and close all the three plugins on the same time 
+nmap <F8>  :TrinityToggleAll<CR> 
+
+" Open and close the Source Explorer separately 
+nmap <F9>  :TrinityToggleSourceExplorer<CR> 
+
+" Open and close the Taglist separately 
+nmap <F10> :TrinityToggleTagList<CR> 
+
+" Open and close the NERD Tree separately 
+nmap <F11> :TrinityToggleNERDTree<CR> """
+
+
+set csprg=gtags-cscope
+
+cs add GTAGS
+
+let GtagsCscope_Auto_Load = 1
+
+let GtagsCscope_Auto_Map = 1
+
+set cscopetag
