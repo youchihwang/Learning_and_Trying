@@ -52,13 +52,18 @@ nmap <F10> :TrinityToggleTagList<CR>
 " Open and close the NERD Tree separately 
 nmap <F11> :TrinityToggleNERDTree<CR> """
 
-
-set csprg=gtags-cscope
-
-cs add GTAGS
+let Gtags_Auto_Map = 1
 
 let GtagsCscope_Auto_Load = 1
 
 let GtagsCscope_Auto_Map = 1
 
+set csprg=gtags-cscope
+
 set cscopetag
+
+cs add GTAGS
+
+" display full path file name
+set laststatus=2
+set statusline+=%F
