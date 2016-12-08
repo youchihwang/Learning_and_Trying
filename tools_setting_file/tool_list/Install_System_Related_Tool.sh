@@ -15,3 +15,6 @@ sudo add-apt-repository ppa:nathan-renniewaldock/flux
 sudo apt-get update
 sudo apt-get install fluxgui
 sudo apt-get install xclip
+
+sudo apt-get install ncurses-dev
+install Gnu Global
