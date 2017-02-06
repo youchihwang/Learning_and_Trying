@@ -1,14 +1,62 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" The setting file of vim
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-colorscheme peachpuff 
-"colorscheme torte
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-if 1
+" for GNU GLOBAL
+Plugin 'bbchung/gtags.vim'
+Plugin 'multilobyte/gtags-cscope'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+"Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" for GNU GLOBAL
+let g:GtagsCscope_Auto_Load = 1
+let g:GtagsCscope_Auto_Map = 1
+
+" below for vim
+colorscheme morning 
+
 " show line number
 set nu
 
-" show cursor line
+"show cursor line
 set cursorline
 
 " tab = 8 white spaces
@@ -20,13 +68,6 @@ set expandtab
 " auto indent width
 set shiftwidth=8
 
-" display column row position down right corner
-set ruler
-
-" Line number color & Cursor Line number color
-" "hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=NONE
-" "hi CursorLineNr cterm=bold ctermfg=Green ctermbg=NONE
-
 " turn on color of syntax
 syntax on
 
@@ -35,34 +76,6 @@ set hlsearch
 
 " Displaying search result before you don't type complete string yet
 set incsearch
-
-
-
-endif
-
-"Open and close all the three plugins on the same time 
-nmap <F8>  :TrinityToggleAll<CR> 
-
-" Open and close the Source Explorer separately 
-nmap <F9>  :TrinityToggleSourceExplorer<CR> 
-
-" Open and close the Taglist separately 
-nmap <F10> :TrinityToggleTagList<CR> 
-
-" Open and close the NERD Tree separately 
-nmap <F11> :TrinityToggleNERDTree<CR> """
-
-let Gtags_Auto_Map = 1
-
-let GtagsCscope_Auto_Load = 1
-
-let GtagsCscope_Auto_Map = 1
-
-set csprg=gtags-cscope
-
-set cscopetag
-
-cs add GTAGS
 
 " display full path file name
 set laststatus=2
