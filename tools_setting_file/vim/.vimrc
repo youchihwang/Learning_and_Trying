@@ -27,6 +27,9 @@
  27 
  28 " for unite-gtags
  29 Plugin 'hewes/unite-gtags'
+ 30
+ 31 " for NERDTREE
+ 32 Plugin 'scrooloose/nerdtree'
  30 
  31 " The following are examples of different formats supported.
  32 
@@ -96,8 +99,12 @@
  96 let g:GtagsCscope_Auto_Load = 1
  97 let g:GtagsCscope_Auto_Map = 1
  98 :nmap <C-g>f :Unite gtags/path:
- 99 
+ 99
+100
+103 " for NERDTree
+104 :nmap <F9> :NERDTree<CR>
 100 
+101
 101 " below for vim
 102 colorscheme morning 
 103 
