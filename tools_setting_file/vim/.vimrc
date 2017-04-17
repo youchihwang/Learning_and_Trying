@@ -106,6 +106,7 @@ let mapleader = "\<Space>"
 " for GNU GLOBAL
 let g:GtagsCscope_Auto_Load = 1
 let g:GtagsCscope_Auto_Map = 1
+let g:Gtags_Auto_Update = 1    " keep tag files up-to-date automatically
 :nnoremap <Leader>gf :Unite gtags/path:
 
 " for NERDTree
