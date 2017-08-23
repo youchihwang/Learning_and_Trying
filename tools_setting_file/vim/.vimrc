@@ -121,9 +121,10 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 :nnoremap <Leader>tc :TlistClose<CR>
 " Speeding up taglist window refresh
 autocmd BufEnter,CursorMoved,CursorMovedI * silent! TlistHighlightTag
-" change taglist window size
-:nnoremap <Leader>twr :vertical resize +10<CR>                                                                                                                                             
-:nnoremap <Leader>twl :vertical resize -10<CR>
+" Add change taglist window size hot key
+:nnoremap <Leader>twh :vertical resize -10<CR>
+:nnoremap <Leader>twl :vertical resize +10<CR>
+
 
 " below for vim
 colorscheme morning 
