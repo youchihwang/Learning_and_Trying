@@ -119,6 +119,8 @@ let g:NERDTreeWinPos = "right"
 let Tlist_GainFocus_On_ToggleOpen = 1
 :nnoremap <Leader>tt :TlistToggle<CR>
 :nnoremap <Leader>tc :TlistClose<CR>
+" Speeding up taglist window refresh
+autocmd BufEnter,CursorMoved,CursorMovedI * silent! TlistHighlightTag
 
 " below for vim
 colorscheme morning 
